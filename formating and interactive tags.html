@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>School Admission - Higher Class</title>
+</head>
+<body>
+
+  <!-- Title -->
+  <h1><mark>🏫 Green Valley School</mark></h1>
+  <h2>Admission Form for <u>Higher Classes</u></h2>
+  <p>Welcome to <strong>Green Valley School</strong>. 
+     Admissions are now open for <b>Classes 6 to 12</b>. 
+     Please fill the form below carefully.</p>
+  <hr>
+
+  <!-- Important Note -->
+  <p><em>Note:</em> Fields marked with <sup>*</sup> are mandatory.</p>
+
+  <!-- Admission Form -->
+  <form>
+    <!-- Student Name -->
+    <label for="name"><b>Student Name</b><sup>*</sup>: </label>
+    <input type="text" id="name" placeholder="Enter full name" required><br><br>
+
+    <!-- Class Selection -->
+    <label for="class"><b>Applying for Class</b><sup>*</sup>: </label>
+    <select id="class" required>
+      <option value="">--Select Class--</option>
+      <option>6th</option>
+      <option>7th</option>
+      <option>8th</option>
+      <option>9th</option>
+      <option>10th</option>
+      <option>11th</option>
+      <option>12th</option>
+    </select><br><br>
+
+    <!-- Previous School -->
+    <label for="prev"><i>Previous School</i>: </label>
+    <input type="text" id="prev" placeholder="Enter previous school name"><br><br>
+
+    <!-- Guardian Details -->
+    <label for="guardian"><b>Parent/Guardian Name</b><sup>*</sup>: </label>
+    <input type="text" id="guardian" required><br><br>
+
+    <label for="contact"><b>Contact Number</b><sup>*</sup>: </label>
+    <input type="tel" id="contact" placeholder="1234567890" required><br><br>
+
+    <!-- Address -->
+    <label for="address"><b>Address</b><sup>*</sup>:</label><br>
+    <textarea id="address" rows="3" cols="40" placeholder="Enter full address"></textarea><br><br>
+
+    <!-- Extra Section -->
+    <details>
+      <summary>📘 Admission Guidelines</summary>
+      <p>Please bring the following documents at the time of admission:</p>
+      <ul>
+        <li>Birth Certificate</li>
+        <li>Transfer Certificate from previous school</li>
+        <li>Report Card of last class</li>
+      </ul>
+    </details><br>
+
+    <!-- Progress Example -->
+    <p><small>Form Completion Status:</small></p>
+    <progress value="40" max="100"></progress> 40%<br><br>
+
+    <!-- Submit Button -->
+    <button type="submit"><b>Submit Application</b></button>
+    <button type="reset">Reset</button>
+  </form>
+
+  <hr>
+
+  <!-- Footer -->
+  <p><del>Old Admission Deadline: 15th April</del> <ins>New Deadline: 30th April</ins></p>
+  <p><small>For any queries, contact: admission@greenvalley.edu</small></p>
+
+</body>
+</html>
+
+
+
+
+
+
