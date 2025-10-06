@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Item Properties</title>
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            margin: 5%;
+            padding: 10%;
+            background: #f4f4f4;
+        }
+        #grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 2vw;
+            padding: 20px;  
+        }
+        h2{
+            text-align: center;
+            color: red;
+        }
+        #grid div {
+            font-size: 1.5vw;
+            padding: 3px;
+            background-color: rgb(53, 175, 106);
+            text-align: center;
+        }
+        .grid-item1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .grid-item2 {
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .grid-item3 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }  
+        .grid-item5{
+            grid-row-start: 3;
+            grid-row-end: 5;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            
+        } 
+        h1{
+            text-align: center;   
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    <h1>Grid Items</h1>
+    <div id="grid">
+
+        <div class="grid-item1"><h2>1</h2>  
+          <img src="img/pr.png.jpg" alt="pr" width="200px">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, cupiditate?</p>
+        </div>
+
+        <div class="grid-item2">
+            <h2>2</h2>
+            
+            <img src="img/perfume-bottle-nature.jpg" alt="perfume-bottle-nature" width="200px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, cupiditate?</p>
+        </div>
+
+        <div class="grid-item3">
+            <h2>3</h2>
+        
+            <img src="img/per.png.jpg" alt="per" width="200px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, cupiditate?</p>
+        </div>
+        <div class="grid-item4">
+            <h2>4</h2>
+            <img src="img/textile.png" alt="perfume-bottle-nature" width="200px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, quibusdam.</p>
+        </div>
+        <div class="grid-item5">
+            <h2>5</h2>
+            <img src="img/bc.png.jpg" alt="bc" width="200px">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, atque!</p>
+        </div>
+    </div>
+</body>
+</html>
