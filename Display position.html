@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display & position</title>
+    <style>
+        /*---  Task 1: Display Basics  ---*/
+        .block div{
+            display: block;
+            background-color: lightcoral;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .inline  div {
+            display: inline;
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .inline-block div {
+            display: inline-block;
+            background-color: lightblue;
+            padding: 10px;
+            margin: 5px;
+            width: 100px;
+            height: 50px;
+        }
+
+        /* Task 2: Hidden Element */
+        .hidden {
+            display: none;
+        }
+
+        /* Task 3 : position basics */
+        .container {
+            border: 2px solid black;
+            height: 200px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .static-box {
+            background: lightgray;
+            padding: 10px;
+            position: static;
+        }
+
+        .relative-box {
+            background: lightyellow;
+            padding: 10px;
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        .absolute-box {
+            background: lightpink;
+            padding: 10px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        /* ---  Task 4: Fixed & Sticky --- */
+        .fixed-box{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: tomato;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* --- Task 5: Menu toggle --- */
+        input [type="checkbox"] {
+            display: none;
+        }
+        label {
+            background-color: teal;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Task 1 - Display basics</h2>
+    <h3>Display : Block</h3>
+    <div class="block">
+        <div>block 1</div>
+        <div>block 2</div>
+        <div>block 3</div>
+    </div>
+
+    <h3>Display : Inline</h3>
+    <div class="inline">
+    <div>Inline 1</div>
+    <div>Inline 2</div>
+    <div>Inline 3</div>
+    </div>
+
+    <h3>Display : Inline block</h3>
+    <div class="inline-block">
+    <div>Inline-block 1</div>
+    <div>Inline-block 2</div>
+    <div>Inline-block 3</div>
+    </div>
+
+<h2>Task 2 - Hidden element</h2>
+<p>This paragraph is visible.</p>
+<p class="hidden">This paragraph is hidden (display : none). </p>
+
+<h2>Task 3 - Position Basics</h2>
+<div class="container">
+    <div class="static-box">static-box</div>
+    <div class="relative-box">relative-box</div>
+    <div class="absolute-box">absolute-box</div>
+</div>
+
+<h3>Task 4 : fixed & Sticky </h3>
+     <div class="fixed-box">Fixed Box</div>
+     <header>Sticky header - stays at top while scrolling</header>
+     <p style="height : 800px;">Scroll to test sticky and fixed position...</p>
+    
+     <h2>Task 5: mini project (menu toggle )</h2>
+     <label for="menu-toggle">☰ Menu</label>
+     <input type="checkbox" id="menu-toggle">
+     <div class="menu">
+        <p>Home</p>
+        <p>About</p>
+        <p>Contact</p>
+     </div>
+    </body>
+</html>
