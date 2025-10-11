@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Variables</h2>
+
+    <script>
+        // Using var
+        var name = "Sakthivel";
+        var age = 23;
+        console.log(name : + "name");
+        console.log(age : + "age");
+
+        // Using let
+        
+        // can be update
+        {
+        let a = 10;
+        a = 40;
+        console.log(a);
+
+        //cannot be redeclared in the same scope.
+        let a = 10;
+        let a = 30;
+        console.log(a);
+        }
+
+        // Using Const
+
+        const country = "India"
+        console.log("country :" + country ); 
+
+        // variables with string, number, boolean, null, undefined.
+
+        let strname = "Sakthi" ; //string
+        console.log(strname);
+
+        let a = 45; //number
+        console.log(a);
+
+        let isOnline = "true"; //boolean
+        console.log(isOnline);
+
+        let y;
+        console.log(y); //undefined
+
+        let username = null;
+        console.log(username); //null
+
+         // Number variables
+    let a = 10;
+    let b = 3;
+
+    // Arithmetic Operators
+    console.log("Addition (+):", a + b);        // 13
+    console.log("Subtraction (-):", a - b);     // 7
+    console.log("Multiplication (*):", a * b);  // 30
+    console.log("Division (/):", a / b);        // 3.333...
+    console.log("Modulus (%):", a % b);         // 1
+
+    // Comparison Operators
+    let x = "10"; 
+    console.log("a == x:", a == x);   // true (value same)
+    console.log("a === x:", a === x); // false (type different)
+
+    // Logical Operators
+    let isTrue = true;
+    let isFalse = false;
+
+    console.log("isTrue && isFalse:", isTrue && isFalse); // false
+    console.log("isTrue || isFalse:", isTrue || isFalse); // true
+
+    // Combined Example
+    if ((a > b) && (a % b === 1)) {
+      console.log("a is greater and remainder is 1");
+    }
+
+    if ((a < b) || (a === 10)) {
+      console.log("One of the condition is true");
+    }
+
+        </script>
+</body>
+</html>
