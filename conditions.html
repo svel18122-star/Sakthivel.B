@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Operators and Conditions</h2>
+    <script>
+        let a = 10;
+        let b = 3;
+
+        console.log(a+b);
+        console.log(a-b);
+        console.log(a*b);
+        console.log(a/b);
+        console.log(a%b);
+
+        //Comparison operators
+        console.log( a == b); //checks only value
+        console.log(a === b); //checks value and data type
+
+        //Logical operators
+        console.log(a < 5 && b > 5);
+        console.log(a > 5 || b < 5 );
+
+        //Check if a number is positive or negative
+
+        let num = -7;
+
+        if (num > 0) {
+            console.log("positive number");
+        } else if (num < 0 ) {
+            console.log("is negative");
+        } else { 
+            console.log("number is zero");
+        }
+
+        //Switch case to print days of the week
+
+        let day = 3;
+
+        
+        switch(day) {
+            case 1:
+                console.log("Sunday");
+                break;
+            case 2:
+                console.log("Monday");
+                break;
+            case 3:
+                console.log("Tuesday");
+                break;
+            case 4:
+                console.log("Wednesday");
+                break;
+            case 5:
+                console.log("Thursday");
+                break;
+            case 6:
+                console.log("Friday");
+                break;
+            case 7:
+                console.log("Saturday");
+                break;
+            default:
+                console.log("Invalid Day Number");
+        }
+    </script>
+</body>
+</html>
