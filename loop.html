@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop Task</title>
+</head>
+<body>
+  <h2>JavaScript Loop Task</h2>
+  <script>
+    // 1️⃣ Print numbers 1 to 10 using for loop
+    console.log("Numbers 1 to 10 using for loop:");
+    for (let i = 1; i <= 10; i++) {
+      console.log(i);
+    }
+
+    // 2️⃣ Print numbers 1 to 5 using while loop
+    console.log("Numbers 1 to 5 using while loop:");
+    let j = 1;
+    while (j <= 5) {
+      console.log(j);
+      j++;
+    }
+
+    // 3️⃣ Print numbers 1 to 3 using do-while loop
+    console.log("Numbers 1 to 3 using do-while loop:");
+    let k = 1;
+    do {
+      console.log(k);
+      k++;
+    } while (k <= 3);
+
+    // 4️⃣ Print numbers 1–10, skip 5 using continue, stop at 8 using break
+    console.log("Numbers 1 to 10 (skip 5, stop at 8):");
+    for (let n = 1; n <= 10; n++) {
+      if (n === 5) continue; // skip 5
+      if (n === 8) break;    // stop at 8
+      console.log(n);
+    }
+  </script>
+</body>
+</html>
