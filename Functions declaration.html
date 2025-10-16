@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Today Task</h2>
+
+<script>
+//1. Function to add two numbers
+
+function addNumbers(a, b) {
+    let sum = a + b;
+    console.log("Sum:", sum);
+}
+addNumbers(5, 3);  // Output: Sum: 8
+
+//2. Function Expression to multiply two numbers
+
+const multiplyNumbers = function(a, b) {
+    let product = a * b;
+    console.log("Product:", product);
+};
+multiplyNumbers(4, 2);  // Output: Product: 8
+
+
+//3. Arrow Function to subtract two numbers
+
+
+const subtractNumbers = (a, b) => {
+    let difference = a - b;
+    console.log("Difference:", difference);
+};
+subtractNumbers(10, 6);  // Output: Difference: 4
+
+//4. Function with parameters and return value
+function divideNumbers(a, b) {
+    return a / b;
+}
+
+let result = divideNumbers(10, 2);
+console.log("Division:", result);  // Output: Division: 5
+
+
+//5. Global vs Local Scope demonstration
+
+let globalVar = "I am global";  // Global variable
+
+function showScope() {
+    let localVar = "I am local";  // Local variable
+    console.log(globalVar);  // Accessible
+    console.log(localVar);   // Accessible
+}
+
+showScope();
+
+console.log(globalVar);  // Accessible (global scope)
+// console.log(localVar);  ❌ Error: localVar is not defined
+</script>
+</body>
+</html>
