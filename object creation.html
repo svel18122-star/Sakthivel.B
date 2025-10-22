@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object creation properties</h1>
+    <script>
+        // Create an object
+let person = {
+  name: "Gowtham",
+  age: 22,
+
+  // Method inside object
+  sayHello: function() {
+    console.log("Hello, my name is " + this.name);
+  }
+};
+
+// Access object properties
+console.log("Name:", person.name);
+console.log("Age:", person.age);
+
+// Modify object properties
+person.age = 23;
+person.name = "Sakthi Vel";
+
+console.log("Updated Name:", person.name);
+console.log("Updated Age:", person.age);
+
+// Call object method
+person.sayHello();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
