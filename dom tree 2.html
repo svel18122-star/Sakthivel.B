@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Tree Methods Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input, button {
+      padding: 8px;
+      margin-top: 10px;
+    }
+    #output {
+      margin-top: 15px;
+      font-weight: bold;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>DOM Events Practice</h2>
+
+  <!-- Input box -->
+  <input type="text" id="userInput" placeholder="Type something...">
+  <p id="showText"></p>
+
+  <!-- Button -->
+  <button id="clickBtn">Click Me</button>
+  <p id="output"></p>
+
+  <!-- Form -->
+  <form id="myForm">
+    <input type="text" id="name" placeholder="Enter your name">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // 1️⃣ Add button click event
+    document.getElementById("clickBtn").onclick = function() {
+      document.getElementById("output").innerText = "Button was clicked!";
+    };
+
+    // 2️⃣ Show input value when typing
+    document.getElementById("userInput").addEventListener("input", function() {
+      let value = this.value;
+      document.getElementById("showText").innerText = "You typed: " + value;
+    });
+
+    // 3️⃣ Handle form submit event
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent page reload
+      let nameValue = document.getElementById("name").value;
+      alert("Form submitted! Name: " + nameValue);
+    });
+
+    // 4️⃣ Add event listener to a button
+    let btn = document.getElementById("clickBtn");
+    btn.addEventListener("mouseover", function() {
+      btn.style.backgroundColor = "lightgreen";
+    });
+    btn.addEventListener("mouseout", function() {
+      btn.style.backgroundColor = "";
+    });
+  </script>
+
+</body>
+</html>
