@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6 Practice</title>
+</head>
+<body>
+  <h2>ES6 Features Practice</h2>
+  <script>
+    // -------------------------------
+    // 🧩 ES6_1
+    // -------------------------------
+
+    // 1️⃣ let and const
+    const name = "Sakthi";
+    let age = 21;
+    console.log(`Name: ${name}, Age: ${age}`);
+
+    // 2️⃣ Template Literals
+    const city = "Chennai";
+    const country = "India";
+    console.log(`I live in ${city}, which is in ${country}.`);
+
+    // 3️⃣ Default Parameter Values
+    function greet(name = "Guest", message = "Welcome!") {
+      return `Hello ${name}, ${message}`;
+    }
+    console.log(greet());
+    console.log(greet("Sakthi"));
+    console.log(greet("Vel", "Good Day!"));
+
+
+    // -------------------------------
+    // 🧩 ES6_2
+    // -------------------------------
+
+    // 1️⃣ Destructuring
+    const colors = ["red", "green", "blue"];
+    const [first, second, third] = colors;
+    console.log(first, second, third);
+
+    const person = { pname: "Sakthi", page: 21, pcity: "Chennai" };
+    const { pname, page, pcity } = person;
+    console.log(pname, page, pcity);
+
+    // 2️⃣ Spread Operator
+    const numbers = [1, 2, 3];
+    const newNumbers = [...numbers, 4, 5];
+    console.log("Original:", numbers);
+    console.log("Copied:", newNumbers);
+
+    // 3️⃣ Rest Operator
+    function sum(...nums) {
+      return nums.reduce((total, n) => total + n, 0);
+    }
+    console.log(sum(1, 2, 3));
+    console.log(sum(5, 10, 15, 20));
+
+
+    // -------------------------------
+    // 🧩 ES6_3
+    // -------------------------------
+
+    // 1️⃣ Arrow Functions
+    const multiply = (a, b) => a * b;
+    const greetUser = name => `Hello, ${name}!`;
+
+    console.log(multiply(5, 3));
+    console.log(greetUser("Sakthi"));
+
+    // 2️⃣ Class with Constructor & Method
+    class Student {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      introduce() {
+        return `Hi, I'm ${this.name} and I'm ${this.age} years old.`;
+      }
+    }
+
+    const student1 = new Student("Sakthi", 21);
+    console.log(student1.introduce());
+
+  </script>
+</body>
+</html>
