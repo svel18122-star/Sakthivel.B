@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sync vs Async | Callbacks & Promises</title>
+</head>
+<body>
+
+  <h1>JavaScript: Sync & Async | Callbacks & Promises</h1>
+
+  <h2>1️ Synchronous vs Asynchronous</h2>
+  <button onclick="runSync()">Run Synchronous</button>
+  <button onclick="runAsync()">Run Asynchronous</button>
+  <div class="output" id="syncAsyncOutput"></div>
+
+  <h2>2️ Callbacks & Promises</h2>
+  <button onclick="runCallbackPromise()">Run Callback + Promise</button>
+  <div class="output" id="callbackPromiseOutput"></div>
+
+  <script>
+    //  Synchronous Example
+    function runSync() {
+      const out = document.getElementById("syncAsyncOutput");
+      out.innerHTML = " Synchronous Execution\n";
+      out.innerHTML += "Start\n";
+
+      for (let i = 1; i <= 3; i++) {
+        out.innerHTML += "Step " + i + "\n";
+      }
+
+      out.innerHTML += "End\n";
+    }
+
+    // Asynchronous Example
+    function runAsync() {
+      const out = document.getElementById("syncAsyncOutput");
+      out.innerHTML = " Asynchronous Execution\n";
+      out.innerHTML += "Start\n";
+
+      // Print message after 2 seconds
+      setTimeout(() => {
+        out.innerHTML += "Message after 2 seconds \n";
+      }, 2000);
+
+      // Print counter every 1 second
+      let count = 1;
+      const timer = setInterval(() => {
+        out.innerHTML += "Counter: " + count + "\n";
+        count++;
+        if (count > 5) {
+          clearInterval(timer);
+          out.innerHTML += "Counter stopped \n";
+        }
+      }, 1000);
+
+      out.innerHTML += "End\n";
+    }
+
+    //  Callback + Promise Example
+    function runCallbackPromise() {
+      const out = document.getElementById("callbackPromiseOutput");
+      out.innerHTML = " Callbacks & Promises Example\n";
+
+      // Function that accepts a callback
+      function doSomething(callback) {
+        out.innerHTML += "Doing something...\n";
+        callback("Callback executed successfully ");
+      }
+
+      // Call the callback function
+      doSomething((message) => {
+        out.innerHTML += message + "\n";
+      });
+
+      // Create a Promise
+      const myPromise = new Promise((resolve, reject) => {
+        const success = Math.random() > 0.5; // Random true/false
+        setTimeout(() => {
+          if (success) {
+            resolve(" Promise resolved successfully!");
+          } else {
+            reject(" Promise rejected due to an error.");
+          }
+        }, 2000);
+      });
+
+      // Handle Promise using then() and catch()
+      myPromise
+        .then((result) => {
+          out.innerHTML += result + "\n";
+        })
+        .catch((error) => {
+          out.innerHTML += error + "\n";
+        });
+    }
+  </script>
+</body>
+</html>
