@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Callback, Promise & Async/Await Example</title>
+</head>
+<body>
+  <h1>JavaScript: Callback, Promise & Async/Await</h1>
+  <button onclick="runAll()">Run Example</button>
+  <p id="output"></p>
+
+  <script>
+    const output = document.getElementById("output");
+
+    // 1️⃣ Function that accepts a callback
+    function greetUser(name, callback) {
+      callback(`Hello, ${name}!`);
+    }
+
+    // 2️⃣ Promise that resolves or rejects
+    function checkNumber(num) {
+      return new Promise((resolve, reject) => {
+        if (num > 5) {
+          resolve("✅ Number is greater than 5");
+        } else {
+          reject("❌ Number is less than or equal to 5");
+        }
+      });
+    }
+
+    // 3️⃣ Handle Promise using .then() and .catch()
+    function handleWithThenCatch(num) {
+      checkNumber(num)
+        .then((message) => {
+          output.innerHTML += `<br>${message}`;
+        })
+        .catch((error) => {
+          output.innerHTML += `<br>${error}`;
+        });
+    }
+
+    // 4️⃣ Rewrite using async/await
+    async function handleWithAsyncAwait(num) {
+      try {
+        const message = await checkNumber(num);
+        output.innerHTML += `<br>${message}`;
+      } catch (error) {
+        output.innerHTML += `<br>${error}`;
+      }
+    }
+
+    // 🔄 Run all examples
+    function runAll() {
+      output.innerHTML = ""; // clear output
+
+      // Callback example
+      greetUser("Sakthi", (message) => {
+        output.innerHTML += `${message}<br>`;
+      });
+
+      // Promise with .then()/.catch()
+      handleWithThenCatch(8);
+      handleWithThenCatch(3);
+
+      // Async/Await example
+      handleWithAsyncAwait(10);
+      handleWithAsyncAwait(2);
+    }
+  </script>
+</body>
+</html>
