@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalStorage & SessionStorage Example</title>
+</head>
+<body>
+  <h1>LocalStorage and SessionStorage</h1>
+
+  <h2>Local Storage</h2>
+  <input type="text" id="localInput" placeholder="Enter localStorage value">
+  <button onclick="saveLocal()">Save to LocalStorage</button>
+  <button onclick="getLocal()">Get from LocalStorage</button>
+  <p id="localOutput"></p>
+
+  <h2>Session Storage</h2>
+  <input type="text" id="sessionInput" placeholder="Enter sessionStorage value">
+  <button onclick="saveSession()">Save to SessionStorage</button>
+  <button onclick="getSession()">Get from SessionStorage</button>
+  <p id="sessionOutput"></p>
+
+  <script>
+    // ✅ Save value in localStorage
+    function saveLocal() {
+      const value = document.getElementById("localInput").value;
+      localStorage.setItem("myLocalValue", value);
+      document.getElementById("localOutput").innerHTML = `Saved: ${value}`;
+    }
+
+    // ✅ Retrieve value from localStorage
+    function getLocal() {
+      const value = localStorage.getItem("myLocalValue");
+      document.getElementById("localOutput").innerHTML = value
+        ? `Retrieved: ${value}`
+        : "No value found in LocalStorage.";
+    }
+
+    // ✅ Save value in sessionStorage
+    function saveSession() {
+      const value = document.getElementById("sessionInput").value;
+      sessionStorage.setItem("mySessionValue", value);
+      document.getElementById("sessionOutput").innerHTML = `Saved: ${value}`;
+    }
+
+    // ✅ Retrieve value from sessionStorage
+    function getSession() {
+      const value = sessionStorage.getItem("mySessionValue");
+      document.getElementById("sessionOutput").innerHTML = value
+        ? `Retrieved: ${value}`
+        : "No value found in SessionStorage.";
+    }
+  </script>
+</body>
+</html>
